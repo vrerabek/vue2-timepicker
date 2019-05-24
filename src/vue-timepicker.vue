@@ -350,6 +350,7 @@ export default {
         this.hour = value
       } else if (type === 'minute') {
         this.minute = value
+        this.toggleDropdown()
       } else if (type === 'second') {
         this.second = value
       } else if (type === 'apm') {
