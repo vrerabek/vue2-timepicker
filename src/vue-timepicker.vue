@@ -348,9 +348,14 @@ export default {
     select (type, value) {
       if (type === 'hour') {
         this.hour = value
+        if (this.minute){
+          this.toggleDropdown()
+        }
       } else if (type === 'minute') {
         this.minute = value
-        this.toggleDropdown()
+        if (this.hour){
+          this.toggleDropdown()
+        }
       } else if (type === 'second') {
         this.second = value
       } else if (type === 'apm') {
